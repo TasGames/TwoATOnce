@@ -1,4 +1,4 @@
-﻿Log file open, 11/13/18 11:08:46
+﻿Log file open, 11/13/18 11:12:29
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
@@ -8,7 +8,7 @@ LogWindows: File 'VtuneApi32e.dll' does not exist
 LogInit: Display: Running engine for game: GravityShift
 LogPlatformFile: Not using cached read wrapper
 LogTaskGraph: Started task graph with 5 named threads and 14 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 0.189748
+LogStats: Stats thread started at 0.183830
 LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
 LogICUInternationalization: Display: ICU TimeZone Detection - Raw Offset: +0:00, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -91,7 +91,8 @@ LogPluginManager: Mounting plugin ProceduralMeshComponent
 LogPluginManager: Mounting plugin RuntimePhysXCooking
 LogPluginManager: Mounting plugin SteamVR
 LogPluginManager: Mounting plugin WindowsMoviePlayer
-LogStreaming: Display: Took  0.097s to configure plugins.
+LogPluginManager: Mounting plugin CustomGravityPlugin
+LogStreaming: Display: Took  0.125s to configure plugins.
 LogInit: Using libcurl 7.55.1-DEV
 LogInit:  - built for x86_64-pc-win32
 LogInit:  - supports SSL with OpenSSL/1.0.2h
@@ -148,777 +149,189 @@ LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 1
 LogStreaming: Display: Took  0.000s to delete old logs.
 LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
 LogInit: Object subsystem initialized
-[2018.11.13-11.08.46:991][  0]LogInit: Selected Device Profile: [Windows]
-[2018.11.13-11.08.46:991][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
-[2018.11.13-11.08.47:000][  0]LogHAL: Display: Platform has ~ 16 GB [17116667904 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
-[2018.11.13-11.08.47:000][  0]LogInit: Setting Device Profile CVar: [[r.Vulkan.UseRealUBs:1]]
-[2018.11.13-11.08.47:000][  0]LogInit: Going up to parent DeviceProfile []
-[2018.11.13-11.08.47:001][  0]LogInit: Computer: DESKTOP-C6U4EA4
-[2018.11.13-11.08.47:001][  0]LogInit: User: ThomasSimon
-[2018.11.13-11.08.47:001][  0]LogInit: CPU Page size=4096, Cores=4
-[2018.11.13-11.08.47:001][  0]LogInit: High frequency timer resolution =3.234371 MHz
-[2018.11.13-11.08.47:001][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
-[2018.11.13-11.08.47:001][  0]LogMemory: Platform Memory Stats for Windows
-[2018.11.13-11.08.47:001][  0]LogMemory: Process Physical Memory: 100.13 MB used, 100.13 MB peak
-[2018.11.13-11.08.47:001][  0]LogMemory: Process Virtual Memory: 84.39 MB used, 84.39 MB peak
-[2018.11.13-11.08.47:001][  0]LogMemory: Physical Memory: 6272.50 MB used,  10051.22 MB free, 16323.73 MB total
-[2018.11.13-11.08.47:001][  0]LogMemory: Virtual Memory: 4625.40 MB used,  10051.22 MB free, 134217728.00 MB total
-[2018.11.13-11.08.47:021][  0]LogInit: Using OS detected language (en-GB).
-[2018.11.13-11.08.47:021][  0]LogInit: Using OS detected locale (en-GB).
-[2018.11.13-11.08.47:021][  0]LogTextLocalizationManager: No specific localization for 'en-GB' exists, so the 'en' localization will be used.
-[2018.11.13-11.08.47:388][  0]LogStreaming: Display: Took  0.367s to InitEngineTextLocalization.
-[2018.11.13-11.08.47:388][  0]LogInit: Setting process to per monitor DPI aware
-[2018.11.13-11.08.47:423][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
-[2018.11.13-11.08.47:423][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
-[2018.11.13-11.08.47:592][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2018.11.13-11.08.47:592][  0]LogD3D11RHI: D3D11 adapters:
-[2018.11.13-11.08.47:634][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 970' (Feature Level 11_0)
-[2018.11.13-11.08.47:634][  0]LogD3D11RHI:       4043/0/8161 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:3, VendorId:0x10de
-[2018.11.13-11.08.47:637][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
-[2018.11.13-11.08.47:637][  0]LogD3D11RHI:       0/0/8161 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
-[2018.11.13-11.08.47:637][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
-[2018.11.13-11.08.47:643][  0]LogD3D11RHI: Creating new Direct3DDevice
-[2018.11.13-11.08.47:643][  0]LogD3D11RHI:     GPU DeviceId: 0x13c2 (for the marketing name, search the web for "GPU Device Id")
-[2018.11.13-11.08.47:643][  0]LogWindows: EnumDisplayDevices:
-[2018.11.13-11.08.47:643][  0]LogWindows:    0. 'NVIDIA GeForce GTX 970' (P:0 D:1)
-[2018.11.13-11.08.47:644][  0]LogWindows:    1. 'NVIDIA GeForce GTX 970' (P:0 D:1)
-[2018.11.13-11.08.47:644][  0]LogWindows:    2. 'NVIDIA GeForce GTX 970' (P:1 D:1)
-[2018.11.13-11.08.47:644][  0]LogWindows:    3. 'NVIDIA GeForce GTX 970' (P:0 D:0)
-[2018.11.13-11.08.47:644][  0]LogWindows: DebugString: FoundDriverCount:4 
-[2018.11.13-11.08.47:644][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 970
-[2018.11.13-11.08.47:644][  0]LogD3D11RHI:   Driver Version: 398.11 (internal:24.21.13.9811, unified:398.11)
-[2018.11.13-11.08.47:644][  0]LogD3D11RHI:      Driver Date: 6-1-2018
-[2018.11.13-11.08.47:644][  0]LogRHI: Texture pool is 2830 MB (70% of 4043 MB)
-[2018.11.13-11.08.47:673][  0]LogD3D11RHI: Async texture creation enabled
-[2018.11.13-11.08.47:689][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 2)
-[2018.11.13-11.08.47:740][  0]LogShaderCompilers: Guid format shader working directory is -5 characters bigger than the processId version (A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Intermediate/Shaders/WorkingDirectory/23392/).
-[2018.11.13-11.08.47:741][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Thomas Simon/AppData/Local/Temp/UnrealShaderWorkingDir/113B11764A195EFDE1EF5D96FACC3873/'.
-[2018.11.13-11.08.48:059][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
-[2018.11.13-11.08.48:071][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
-[2018.11.13-11.08.48:083][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
-[2018.11.13-11.08.48:095][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
-[2018.11.13-11.08.48:109][  0]LogTemp: Display: Loaded TP MacTargetPlatform
-[2018.11.13-11.08.48:124][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
-[2018.11.13-11.08.48:137][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
-[2018.11.13-11.08.48:151][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
-[2018.11.13-11.08.48:157][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
-[2018.11.13-11.08.48:237][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:237][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:237][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:237][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:238][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:238][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:238][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:238][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:238][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:238][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:238][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:238][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:238][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:238][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:238][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:238][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:238][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:238][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.11.13-11.08.48:239][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
-[2018.11.13-11.08.48:302][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
-[2018.11.13-11.08.48:302][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
-[2018.11.13-11.08.48:323][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
-[2018.11.13-11.08.48:323][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
-[2018.11.13-11.08.48:335][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
-[2018.11.13-11.08.48:346][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
-[2018.11.13-11.08.48:360][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
-[2018.11.13-11.08.48:374][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
-[2018.11.13-11.08.48:384][  0]LogTemp: Display: Loaded TP LuminTargetPlatform
-[2018.11.13-11.08.48:384][  0]LogTargetPlatformManager: Display: Building Assets For Windows
-[2018.11.13-11.08.48:449][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
-[2018.11.13-11.08.48:449][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
-[2018.11.13-11.08.48:449][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
-[2018.11.13-11.08.49:212][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
-[2018.11.13-11.08.49:266][  0]LogDerivedDataCache: Loaded boot cache 0.05s 71MB C:/Users/Thomas Simon/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc.
-[2018.11.13-11.08.49:267][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/Thomas Simon/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc
-[2018.11.13-11.08.49:267][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
-[2018.11.13-11.08.49:267][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
-[2018.11.13-11.08.49:267][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2018.11.13-11.08.49:267][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
-[2018.11.13-11.08.49:279][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
-[2018.11.13-11.08.49:293][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Thomas Simon/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
-[2018.11.13-11.08.49:293][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
-[2018.11.13-11.08.49:293][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
-[2018.11.13-11.08.49:312][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
-[2018.11.13-11.08.49:314][  0]LogSlate: Using FreeType 2.6.0
-[2018.11.13-11.08.49:315][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2018.11.13-11.08.49:395][  0]LogAssetRegistry: FAssetRegistry took 0.0282 seconds to start up
-[2018.11.13-11.08.49:705][  0]LogInit: Selected Device Profile: [Windows]
-[2018.11.13-11.08.49:848][  0]LogSimplygon: Simplygon DLL not present - disabling.
-[2018.11.13-11.08.49:852][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
-[2018.11.13-11.08.49:852][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
-[2018.11.13-11.08.49:852][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
-[2018.11.13-11.08.49:852][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
-[2018.11.13-11.08.49:874][  0]LogNetVersion: GravityShift 1.0.0, NetCL: 4212847, EngineNetVer: 5, GameNetVer: 0 (Checksum: 2627910602)
-[2018.11.13-11.08.50:376][  0]LogPackageLocalizationCache: Processed 11 localized package path(s) for 2 prioritized culture(s) in 0.094102 seconds
-[2018.11.13-11.08.50:384][  0]LogUObjectArray: 38425 objects as part of root set at end of initial load.
-[2018.11.13-11.08.50:384][  0]LogUObjectAllocator: 6690864 out of 0 bytes used by permanent object pool.
-[2018.11.13-11.08.50:384][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
-[2018.11.13-11.08.51:223][  0]LogTcpMessaging: Initializing TcpMessaging bridge
-[2018.11.13-11.08.51:245][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
-[2018.11.13-11.08.51:389][  0]SourceControl: Source control is disabled
-[2018.11.13-11.08.51:389][  0]SourceControl: Source control is disabled
-[2018.11.13-11.08.51:390][  0]SourceControl: Source control is disabled
-[2018.11.13-11.08.51:391][  0]SourceControl: Source control is disabled
-[2018.11.13-11.08.51:556][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
-[2018.11.13-11.08.51:599][  0]LogOcInput: OculusInput pre-init called
-[2018.11.13-11.08.51:654][  0]LogEngine: Initializing Engine...
-[2018.11.13-11.08.51:655][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2018.11.13-11.08.51:656][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
-[2018.11.13-11.08.51:656][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
-[2018.11.13-11.08.51:656][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
-[2018.11.13-11.08.51:656][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
-[2018.11.13-11.08.51:842][  0]LogInit: Initializing FReadOnlyCVARCache
-[2018.11.13-11.08.51:854][  0]LogAIModule: Creating AISystem for world Untitled
-[2018.11.13-11.08.51:877][  0]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 44.1 kHz using 16 bits per sample (channel mask 0x3)
-[2018.11.13-11.08.51:891][  0]LogInit: FAudioDevice initialized.
-[2018.11.13-11.08.51:892][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
-[2018.11.13-11.08.51:961][  0]LogDerivedDataCache: Saved boot cache 0.07s 71MB C:/Users/Thomas Simon/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc.
-[2018.11.13-11.08.51:966][  0]LogInit: Texture streaming: Enabled
-[2018.11.13-11.08.51:981][  0]LogEngineSessionManager: EngineSessionManager initialized
-[2018.11.13-11.08.51:995][  0]LogInit: Transaction tracking system initialized
-[2018.11.13-11.08.52:020][  0]BlueprintLog: New page: Editor Load
-[2018.11.13-11.08.52:132][  0]LocalizationService: Localization service is disabled
-[2018.11.13-11.08.52:385][  0]LogFileCache: Scanning file cache for directory 'A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/' took 0.01s
-[2018.11.13-11.08.52:385][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
-[2018.11.13-11.08.52:385][  0]LogCook: Display: Mobile HDR setting 1
-[2018.11.13-11.08.52:385][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
-[2018.11.13-11.08.52:385][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
-[2018.11.13-11.08.52:385][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
-[2018.11.13-11.08.52:385][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
-[2018.11.13-11.08.52:385][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
-[2018.11.13-11.08.52:500][  0]SourceControl: Source control is disabled
-[2018.11.13-11.08.52:501][  0]LogFactory: FactoryCreateFile: PackFactory with PackFactory (0 0 C:/Program Files/Epic Games/UE_4.20/FeaturePacks/StarterContent.upack)
-[2018.11.13-11.08.52:505][  0]LogPackFactory: Finished extracting 8 files (including 0 errors).
-[2018.11.13-11.08.52:507][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Floor_400x400.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Architecture/Floor_400x400.uasset"
-[2018.11.13-11.08.52:510][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Pillar_50x500.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Architecture/Pillar_50x500.uasset"
-[2018.11.13-11.08.52:511][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/SM_AssetPlatform.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Architecture/SM_AssetPlatform.uasset"
-[2018.11.13-11.08.52:513][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_400x200.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Architecture/Wall_400x200.uasset"
-[2018.11.13-11.08.52:515][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_400x300.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Architecture/Wall_400x300.uasset"
-[2018.11.13-11.08.52:521][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_400x400.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Architecture/Wall_400x400.uasset"
-[2018.11.13-11.08.52:522][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_500x500.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Architecture/Wall_500x500.uasset"
-[2018.11.13-11.08.52:524][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_Door_400x300.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Architecture/Wall_Door_400x300.uasset"
-[2018.11.13-11.08.52:526][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_Door_400x400.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Architecture/Wall_Door_400x400.uasset"
-[2018.11.13-11.08.52:527][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_Window_400x300.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Architecture/Wall_Window_400x300.uasset"
-[2018.11.13-11.08.52:529][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_Window_400x400.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Architecture/Wall_Window_400x400.uasset"
-[2018.11.13-11.08.52:532][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Collapse01.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Collapse01.uasset"
-[2018.11.13-11.08.52:534][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Collapse02.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Collapse02.uasset"
-[2018.11.13-11.08.52:535][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Collapse_Cue.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Collapse_Cue.uasset"
-[2018.11.13-11.08.52:537][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Explosion01.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Explosion01.uasset"
-[2018.11.13-11.08.52:538][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Explosion02.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Explosion02.uasset"
-[2018.11.13-11.08.52:545][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Explosion_Cue.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Explosion_Cue.uasset"
-[2018.11.13-11.08.52:547][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Fire01.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Fire01.uasset"
-[2018.11.13-11.08.52:549][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Fire01_Cue.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Fire01_Cue.uasset"
-[2018.11.13-11.08.52:551][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Fire_Sparks01.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Fire_Sparks01.uasset"
-[2018.11.13-11.08.52:553][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Fire_Sparks01_Cue.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Fire_Sparks01_Cue.uasset"
-[2018.11.13-11.08.52:554][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Light01.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Light01.uasset"
-[2018.11.13-11.08.52:556][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Light01_Cue.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Light01_Cue.uasset"
-[2018.11.13-11.08.52:557][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Light02.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Light02.uasset"
-[2018.11.13-11.08.52:559][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Light02_Cue.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Light02_Cue.uasset"
-[2018.11.13-11.08.52:561][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Smoke01.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Smoke01.uasset"
-[2018.11.13-11.08.52:562][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Smoke01_Cue.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Smoke01_Cue.uasset"
-[2018.11.13-11.08.52:564][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Starter_Background_Cue.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Starter_Background_Cue.uasset"
-[2018.11.13-11.08.52:567][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Starter_Birds01.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Starter_Birds01.uasset"
-[2018.11.13-11.08.52:573][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Starter_Music01.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Starter_Music01.uasset"
-[2018.11.13-11.08.52:575][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Starter_Music_Cue.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Starter_Music_Cue.uasset"
-[2018.11.13-11.08.52:578][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Starter_Wind05.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Starter_Wind05.uasset"
-[2018.11.13-11.08.52:581][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Starter_Wind06.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Starter_Wind06.uasset"
-[2018.11.13-11.08.52:583][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Steam01.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Steam01.uasset"
-[2018.11.13-11.08.52:585][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Steam01_Cue.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Audio/Steam01_Cue.uasset"
-[2018.11.13-11.08.52:587][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset"
-[2018.11.13-11.08.52:588][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Blueprint_Effect_Explosion.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/Blueprint_Effect_Explosion.uasset"
-[2018.11.13-11.08.52:590][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Blueprint_Effect_Fire.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/Blueprint_Effect_Fire.uasset"
-[2018.11.13-11.08.52:591][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Blueprint_Effect_Smoke.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/Blueprint_Effect_Smoke.uasset"
-[2018.11.13-11.08.52:594][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Blueprint_Effect_Sparks.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/Blueprint_Effect_Sparks.uasset"
-[2018.11.13-11.08.52:595][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Blueprint_Effect_Steam.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/Blueprint_Effect_Steam.uasset"
-[2018.11.13-11.08.52:598][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Blueprint_WallSconce.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/Blueprint_WallSconce.uasset"
-[2018.11.13-11.08.52:600][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/BP_LightStudio.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/BP_LightStudio.uasset"
-[2018.11.13-11.08.52:602][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/FogBrightnessLUT.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/Assets/FogBrightnessLUT.uasset"
-[2018.11.13-11.08.52:604][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/M_LightStage_Arrows.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/Assets/M_LightStage_Arrows.uasset"
-[2018.11.13-11.08.52:606][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Black.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Black.uasset"
-[2018.11.13-11.08.52:607][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_HDRI.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_HDRI.uasset"
-[2018.11.13-11.08.52:609][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Master.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Master.uasset"
-[2018.11.13-11.08.52:611][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/Skybox.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/Assets/Skybox.uasset"
-[2018.11.13-11.08.52:613][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/SM_Arrows.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/Assets/SM_Arrows.uasset"
-[2018.11.13-11.08.52:614][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/SunlightColorLUT.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Blueprints/Assets/SunlightColorLUT.uasset"
-[2018.11.13-11.08.52:655][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset"
-[2018.11.13-11.08.52:657][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Maps/Advanced_Lighting.umap" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Maps/Advanced_Lighting.umap"
-[2018.11.13-11.08.52:660][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Maps/Advanced_Lighting_BuiltData.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Maps/Advanced_Lighting_BuiltData.uasset"
-[2018.11.13-11.08.52:662][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Maps/Minimal_Default.umap" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Maps/Minimal_Default.umap"
-[2018.11.13-11.08.52:667][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset"
-[2018.11.13-11.08.52:669][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Maps/StarterMap.umap" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Maps/StarterMap.umap"
-[2018.11.13-11.08.52:686][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Maps/StarterMap_BuiltData.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Maps/StarterMap_BuiltData.uasset"
-[2018.11.13-11.08.52:690][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_AssetPlatform.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_AssetPlatform.uasset"
-[2018.11.13-11.08.52:691][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Basic_Floor.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Basic_Floor.uasset"
-[2018.11.13-11.08.52:693][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Basic_Wall.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Basic_Wall.uasset"
-[2018.11.13-11.08.52:694][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Brick_Clay_Beveled.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Brick_Clay_Beveled.uasset"
-[2018.11.13-11.08.52:695][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Brick_Clay_New.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Brick_Clay_New.uasset"
-[2018.11.13-11.08.52:697][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Brick_Clay_Old.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Brick_Clay_Old.uasset"
-[2018.11.13-11.08.52:699][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Brick_Cut_Stone.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Brick_Cut_Stone.uasset"
-[2018.11.13-11.08.52:700][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Brick_Hewn_Stone.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Brick_Hewn_Stone.uasset"
-[2018.11.13-11.08.52:700][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Ceramic_Tile_Checker.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Ceramic_Tile_Checker.uasset"
-[2018.11.13-11.08.52:701][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_CobbleStone_Pebble.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_CobbleStone_Pebble.uasset"
-[2018.11.13-11.08.52:702][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_CobbleStone_Rough.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_CobbleStone_Rough.uasset"
-[2018.11.13-11.08.52:704][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_CobbleStone_Smooth.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_CobbleStone_Smooth.uasset"
-[2018.11.13-11.08.52:705][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_ColorGrid_LowSpec.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_ColorGrid_LowSpec.uasset"
-[2018.11.13-11.08.52:707][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Concrete_Grime.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Concrete_Grime.uasset"
-[2018.11.13-11.08.52:708][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Concrete_Panels.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Concrete_Panels.uasset"
-[2018.11.13-11.08.52:710][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Concrete_Poured.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Concrete_Poured.uasset"
-[2018.11.13-11.08.52:711][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Concrete_Tiles.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Concrete_Tiles.uasset"
-[2018.11.13-11.08.52:713][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Glass.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Glass.uasset"
-[2018.11.13-11.08.52:714][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Ground_Grass.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Ground_Grass.uasset"
-[2018.11.13-11.08.52:716][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Ground_Gravel.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Ground_Gravel.uasset"
-[2018.11.13-11.08.52:717][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Ground_Moss.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Ground_Moss.uasset"
-[2018.11.13-11.08.52:719][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Metal_Brushed_Nickel.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Metal_Brushed_Nickel.uasset"
-[2018.11.13-11.08.52:720][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Metal_Burnished_Steel.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Metal_Burnished_Steel.uasset"
-[2018.11.13-11.08.52:722][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Metal_Chrome.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Metal_Chrome.uasset"
-[2018.11.13-11.08.52:723][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Metal_Copper.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Metal_Copper.uasset"
-[2018.11.13-11.08.52:725][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Metal_Gold.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Metal_Gold.uasset"
-[2018.11.13-11.08.52:726][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Metal_Rust.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Metal_Rust.uasset"
-[2018.11.13-11.08.52:728][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Metal_Steel.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Metal_Steel.uasset"
-[2018.11.13-11.08.52:730][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Rock_Basalt.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Rock_Basalt.uasset"
-[2018.11.13-11.08.52:731][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Rock_Marble_Polished.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Rock_Marble_Polished.uasset"
-[2018.11.13-11.08.52:733][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Rock_Sandstone.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Rock_Sandstone.uasset"
-[2018.11.13-11.08.52:733][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Rock_Slate.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Rock_Slate.uasset"
-[2018.11.13-11.08.52:735][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Tech_Checker_Dot.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Tech_Checker_Dot.uasset"
-[2018.11.13-11.08.52:736][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Tech_Hex_Tile.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Tech_Hex_Tile.uasset"
-[2018.11.13-11.08.52:738][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Tech_Hex_Tile_Pulse.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Tech_Hex_Tile_Pulse.uasset"
-[2018.11.13-11.08.52:739][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Tech_Panel.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Tech_Panel.uasset"
-[2018.11.13-11.08.52:741][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Water_Lake.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Water_Lake.uasset"
-[2018.11.13-11.08.52:742][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Water_Ocean.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Water_Ocean.uasset"
-[2018.11.13-11.08.52:744][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Polished.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Polished.uasset"
-[2018.11.13-11.08.52:745][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Worn.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Worn.uasset"
-[2018.11.13-11.08.52:747][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Wood_Oak.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Wood_Oak.uasset"
-[2018.11.13-11.08.52:748][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Wood_Pine.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Wood_Pine.uasset"
-[2018.11.13-11.08.52:749][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Wood_Walnut.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Materials/M_Wood_Walnut.uasset"
-[2018.11.13-11.08.52:751][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/P_Ambient_Dust.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/P_Ambient_Dust.uasset"
-[2018.11.13-11.08.52:753][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/P_Explosion.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/P_Explosion.uasset"
-[2018.11.13-11.08.52:754][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/P_Fire.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/P_Fire.uasset"
-[2018.11.13-11.08.52:756][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/P_Smoke.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/P_Smoke.uasset"
-[2018.11.13-11.08.52:757][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/P_Sparks.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/P_Sparks.uasset"
-[2018.11.13-11.08.52:759][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/P_Steam_Lit.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/P_Steam_Lit.uasset"
-[2018.11.13-11.08.52:761][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_Burst.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/Materials/M_Burst.uasset"
-[2018.11.13-11.08.52:762][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_Dust_Particle.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/Materials/M_Dust_Particle.uasset"
-[2018.11.13-11.08.52:764][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_explosion_subUV.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/Materials/M_explosion_subUV.uasset"
-[2018.11.13-11.08.52:766][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_Fire_SubUV.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/Materials/M_Fire_SubUV.uasset"
-[2018.11.13-11.08.52:767][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/m_flare_01.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/Materials/m_flare_01.uasset"
-[2018.11.13-11.08.52:769][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_Heat_Distortion.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/Materials/M_Heat_Distortion.uasset"
-[2018.11.13-11.08.52:771][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_Radial_Gradient.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/Materials/M_Radial_Gradient.uasset"
-[2018.11.13-11.08.52:772][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset"
-[2018.11.13-11.08.52:773][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_smoke_subUV.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/Materials/M_smoke_subUV.uasset"
-[2018.11.13-11.08.52:775][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_Spark.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Particles/Materials/M_Spark.uasset"
-[2018.11.13-11.08.52:776][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/MaterialSphere.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/MaterialSphere.uasset"
-[2018.11.13-11.08.52:778][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Bush.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_Bush.uasset"
-[2018.11.13-11.08.52:780][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Chair.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_Chair.uasset"
-[2018.11.13-11.08.52:781][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_CornerFrame.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_CornerFrame.uasset"
-[2018.11.13-11.08.52:782][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Couch.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_Couch.uasset"
-[2018.11.13-11.08.52:784][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Door.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_Door.uasset"
-[2018.11.13-11.08.52:785][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_DoorFrame.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_DoorFrame.uasset"
-[2018.11.13-11.08.52:787][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_GlassWindow.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_GlassWindow.uasset"
-[2018.11.13-11.08.52:788][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Lamp_Ceiling.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_Lamp_Ceiling.uasset"
-[2018.11.13-11.08.52:790][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Lamp_Wall.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_Lamp_Wall.uasset"
-[2018.11.13-11.08.52:792][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_MatPreviewMesh_02.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_MatPreviewMesh_02.uasset"
-[2018.11.13-11.08.52:794][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_PillarFrame.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_PillarFrame.uasset"
-[2018.11.13-11.08.52:796][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_PillarFrame300.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_PillarFrame300.uasset"
-[2018.11.13-11.08.52:797][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Rock.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_Rock.uasset"
-[2018.11.13-11.08.52:800][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Shelf.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_Shelf.uasset"
-[2018.11.13-11.08.52:801][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Stairs.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_Stairs.uasset"
-[2018.11.13-11.08.52:803][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Statue.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_Statue.uasset"
-[2018.11.13-11.08.52:804][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_TableRound.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_TableRound.uasset"
-[2018.11.13-11.08.52:806][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_WindowFrame.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/SM_WindowFrame.uasset"
-[2018.11.13-11.08.52:808][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Bush.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/Materials/M_Bush.uasset"
-[2018.11.13-11.08.52:810][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Chair.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/Materials/M_Chair.uasset"
-[2018.11.13-11.08.52:811][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Door.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/Materials/M_Door.uasset"
-[2018.11.13-11.08.52:813][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Frame.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/Materials/M_Frame.uasset"
-[2018.11.13-11.08.52:815][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Lamp.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/Materials/M_Lamp.uasset"
-[2018.11.13-11.08.52:817][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_MaterialSphere.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/Materials/M_MaterialSphere.uasset"
-[2018.11.13-11.08.52:819][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_MaterialSphere_Plain.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/Materials/M_MaterialSphere_Plain.uasset"
-[2018.11.13-11.08.52:820][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Rock.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/Materials/M_Rock.uasset"
-[2018.11.13-11.08.52:822][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Shelf.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/Materials/M_Shelf.uasset"
-[2018.11.13-11.08.52:823][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Statue.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/Materials/M_Statue.uasset"
-[2018.11.13-11.08.52:825][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_StatueGlass.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/Materials/M_StatueGlass.uasset"
-[2018.11.13-11.08.52:826][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_TableRound.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Props/Materials/M_TableRound.uasset"
-[2018.11.13-11.08.52:828][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Cone.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_Cone.uasset"
-[2018.11.13-11.08.52:830][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Cube.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_Cube.uasset"
-[2018.11.13-11.08.52:832][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Cylinder.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_Cylinder.uasset"
-[2018.11.13-11.08.52:833][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_NarrowCapsule.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_NarrowCapsule.uasset"
-[2018.11.13-11.08.52:835][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Pipe.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_Pipe.uasset"
-[2018.11.13-11.08.52:837][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Pipe_180.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_Pipe_180.uasset"
-[2018.11.13-11.08.52:838][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Pipe_90.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_Pipe_90.uasset"
-[2018.11.13-11.08.52:840][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Plane.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_Plane.uasset"
-[2018.11.13-11.08.52:841][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_QuadPyramid.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_QuadPyramid.uasset"
-[2018.11.13-11.08.52:843][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Sphere.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_Sphere.uasset"
-[2018.11.13-11.08.52:844][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Torus.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_Torus.uasset"
-[2018.11.13-11.08.52:846][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Trim.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_Trim.uasset"
-[2018.11.13-11.08.52:847][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Trim_90_In.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_Trim_90_In.uasset"
-[2018.11.13-11.08.52:848][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Trim_90_Out.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_Trim_90_Out.uasset"
-[2018.11.13-11.08.52:849][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_TriPyramid.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_TriPyramid.uasset"
-[2018.11.13-11.08.52:850][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Tube.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_Tube.uasset"
-[2018.11.13-11.08.52:851][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Wedge_A.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_Wedge_A.uasset"
-[2018.11.13-11.08.52:853][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Wedge_B.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_Wedge_B.uasset"
-[2018.11.13-11.08.52:854][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_WideCapsule.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Shapes/Shape_WideCapsule.uasset"
-[2018.11.13-11.08.52:860][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_Beveled_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Brick_Clay_Beveled_D.uasset"
-[2018.11.13-11.08.52:867][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_Beveled_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Brick_Clay_Beveled_M.uasset"
-[2018.11.13-11.08.52:886][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_Beveled_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Brick_Clay_Beveled_N.uasset"
-[2018.11.13-11.08.52:890][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_New_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Brick_Clay_New_D.uasset"
-[2018.11.13-11.08.52:897][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_New_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Brick_Clay_New_M.uasset"
-[2018.11.13-11.08.52:903][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_New_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Brick_Clay_New_N.uasset"
-[2018.11.13-11.08.52:912][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_Old_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Brick_Clay_Old_D.uasset"
-[2018.11.13-11.08.52:919][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_Old_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Brick_Clay_Old_N.uasset"
-[2018.11.13-11.08.52:928][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Cut_Stone_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Brick_Cut_Stone_D.uasset"
-[2018.11.13-11.08.52:935][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Cut_Stone_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Brick_Cut_Stone_N.uasset"
-[2018.11.13-11.08.52:941][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Hewn_Stone_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Brick_Hewn_Stone_D.uasset"
-[2018.11.13-11.08.52:946][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Hewn_Stone_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Brick_Hewn_Stone_M.uasset"
-[2018.11.13-11.08.52:954][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Hewn_Stone_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Brick_Hewn_Stone_N.uasset"
-[2018.11.13-11.08.52:955][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Burst_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Burst_M.uasset"
-[2018.11.13-11.08.52:956][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Bush_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Bush_D.uasset"
-[2018.11.13-11.08.52:957][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Bush_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Bush_N.uasset"
-[2018.11.13-11.08.52:959][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Ceramic_Tile_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Ceramic_Tile_M.uasset"
-[2018.11.13-11.08.52:960][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Ceramic_Tile_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Ceramic_Tile_N.uasset"
-[2018.11.13-11.08.52:961][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Chair_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Chair_M.uasset"
-[2018.11.13-11.08.52:964][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Chair_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Chair_N.uasset"
-[2018.11.13-11.08.52:966][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Checker_Noise_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Checker_Noise_M.uasset"
-[2018.11.13-11.08.52:974][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Pebble_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_CobbleStone_Pebble_D.uasset"
-[2018.11.13-11.08.52:976][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Pebble_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_CobbleStone_Pebble_M.uasset"
-[2018.11.13-11.08.52:984][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Pebble_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_CobbleStone_Pebble_N.uasset"
-[2018.11.13-11.08.52:987][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Rough_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_CobbleStone_Rough_D.uasset"
-[2018.11.13-11.08.52:990][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Rough_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_CobbleStone_Rough_N.uasset"
-[2018.11.13-11.08.52:995][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Smooth_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_CobbleStone_Smooth_D.uasset"
-[2018.11.13-11.08.53:000][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Smooth_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_CobbleStone_Smooth_M.uasset"
-[2018.11.13-11.08.53:006][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Smooth_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_CobbleStone_Smooth_N.uasset"
-[2018.11.13-11.08.53:013][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Grime_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Concrete_Grime_D.uasset"
-[2018.11.13-11.08.53:019][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Panels_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Concrete_Panels_D.uasset"
-[2018.11.13-11.08.53:024][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Panels_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Concrete_Panels_N.uasset"
-[2018.11.13-11.08.53:033][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Poured_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Concrete_Poured_D.uasset"
-[2018.11.13-11.08.53:043][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Poured_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Concrete_Poured_N.uasset"
-[2018.11.13-11.08.53:048][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Tiles_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Concrete_Tiles_D.uasset"
-[2018.11.13-11.08.53:053][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Tiles_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Concrete_Tiles_M.uasset"
-[2018.11.13-11.08.53:058][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Tiles_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Concrete_Tiles_N.uasset"
-[2018.11.13-11.08.53:058][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Tiles_Variation_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Concrete_Tiles_Variation_M.uasset"
-[2018.11.13-11.08.53:061][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Detail_Rocky_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Detail_Rocky_N.uasset"
-[2018.11.13-11.08.53:062][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Door_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Door_M.uasset"
-[2018.11.13-11.08.53:063][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Door_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Door_N.uasset"
-[2018.11.13-11.08.53:064][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Dust_Particle_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Dust_Particle_D.uasset"
-[2018.11.13-11.08.53:067][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Explosion_SubUV.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Explosion_SubUV.uasset"
-[2018.11.13-11.08.53:068][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Fire_SubUV.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Fire_SubUV.uasset"
-[2018.11.13-11.08.53:069][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Fire_Tiled_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Fire_Tiled_D.uasset"
-[2018.11.13-11.08.53:070][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Frame_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Frame_M.uasset"
-[2018.11.13-11.08.53:071][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Frame_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Frame_N.uasset"
-[2018.11.13-11.08.53:072][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Gradinet_01.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Gradinet_01.uasset"
-[2018.11.13-11.08.53:082][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Ground_Grass_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Ground_Grass_D.uasset"
-[2018.11.13-11.08.53:090][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Ground_Grass_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Ground_Grass_N.uasset"
-[2018.11.13-11.08.53:100][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Ground_Gravel_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Ground_Gravel_D.uasset"
-[2018.11.13-11.08.53:107][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Ground_Gravel_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Ground_Gravel_N.uasset"
-[2018.11.13-11.08.53:116][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_ground_Moss_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_ground_Moss_D.uasset"
-[2018.11.13-11.08.53:122][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Ground_Moss_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Ground_Moss_N.uasset"
-[2018.11.13-11.08.53:124][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Lamp_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Lamp_M.uasset"
-[2018.11.13-11.08.53:126][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Lamp_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Lamp_N.uasset"
-[2018.11.13-11.08.53:136][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_MacroVariation.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_MacroVariation.uasset"
-[2018.11.13-11.08.53:143][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Aluminum_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Metal_Aluminum_D.uasset"
-[2018.11.13-11.08.53:150][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Copper_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Metal_Copper_D.uasset"
-[2018.11.13-11.08.53:157][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Gold_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Metal_Gold_D.uasset"
-[2018.11.13-11.08.53:159][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Gold_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Metal_Gold_N.uasset"
-[2018.11.13-11.08.53:166][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Rust_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Metal_Rust_D.uasset"
-[2018.11.13-11.08.53:171][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Rust_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Metal_Rust_N.uasset"
-[2018.11.13-11.08.53:175][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Steel_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Metal_Steel_D.uasset"
-[2018.11.13-11.08.53:178][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Steel_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Metal_Steel_N.uasset"
-[2018.11.13-11.08.53:185][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Perlin_Noise_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Perlin_Noise_M.uasset"
-[2018.11.13-11.08.53:188][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_RockMesh_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_RockMesh_M.uasset"
-[2018.11.13-11.08.53:192][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_RockMesh_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_RockMesh_N.uasset"
-[2018.11.13-11.08.53:199][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Basalt_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Rock_Basalt_D.uasset"
-[2018.11.13-11.08.53:204][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Basalt_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Rock_Basalt_N.uasset"
-[2018.11.13-11.08.53:209][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Marble_Polished_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Rock_Marble_Polished_D.uasset"
-[2018.11.13-11.08.53:218][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Sandstone_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Rock_Sandstone_D.uasset"
-[2018.11.13-11.08.53:223][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Sandstone_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Rock_Sandstone_N.uasset"
-[2018.11.13-11.08.53:232][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Slate_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Rock_Slate_D.uasset"
-[2018.11.13-11.08.53:239][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Slate_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Rock_Slate_N.uasset"
-[2018.11.13-11.08.53:245][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Smooth_Granite_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Rock_Smooth_Granite_D.uasset"
-[2018.11.13-11.08.53:248][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Shelf_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Shelf_M.uasset"
-[2018.11.13-11.08.53:252][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Shelf_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Shelf_N.uasset"
-[2018.11.13-11.08.53:252][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Single_Tile_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Single_Tile_N.uasset"
-[2018.11.13-11.08.53:254][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Smoke_SubUV.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Smoke_SubUV.uasset"
-[2018.11.13-11.08.53:256][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Smoke_Tiled_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Smoke_Tiled_D.uasset"
-[2018.11.13-11.08.53:257][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Spark_Core.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Spark_Core.uasset"
-[2018.11.13-11.08.53:258][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Statue_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Statue_M.uasset"
-[2018.11.13-11.08.53:259][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Statue_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Statue_N.uasset"
-[2018.11.13-11.08.53:260][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_TableRound_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_TableRound_M.uasset"
-[2018.11.13-11.08.53:263][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_TableRound_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_TableRound_N.uasset"
-[2018.11.13-11.08.53:264][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Tech_Dot_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Tech_Dot_M.uasset"
-[2018.11.13-11.08.53:266][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Tech_Dot_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Tech_Dot_N.uasset"
-[2018.11.13-11.08.53:269][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Tech_Hex_Tile_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Tech_Hex_Tile_M.uasset"
-[2018.11.13-11.08.53:271][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Tech_Hex_Tile_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Tech_Hex_Tile_N.uasset"
-[2018.11.13-11.08.53:273][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Tech_Panel_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Tech_Panel_M.uasset"
-[2018.11.13-11.08.53:276][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Tech_Panel_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Tech_Panel_N.uasset"
-[2018.11.13-11.08.53:279][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Water_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Water_M.uasset"
-[2018.11.13-11.08.53:284][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Water_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Water_N.uasset"
-[2018.11.13-11.08.53:288][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Floor_Walnut_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Wood_Floor_Walnut_D.uasset"
-[2018.11.13-11.08.53:292][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Floor_Walnut_M.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Wood_Floor_Walnut_M.uasset"
-[2018.11.13-11.08.53:295][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Floor_Walnut_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Wood_Floor_Walnut_N.uasset"
-[2018.11.13-11.08.53:300][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Oak_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Wood_Oak_D.uasset"
-[2018.11.13-11.08.53:305][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Oak_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Wood_Oak_N.uasset"
-[2018.11.13-11.08.53:313][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Pine_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Wood_Pine_D.uasset"
-[2018.11.13-11.08.53:318][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Pine_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Wood_Pine_N.uasset"
-[2018.11.13-11.08.53:323][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Walnut_D.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Wood_Walnut_D.uasset"
-[2018.11.13-11.08.53:327][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Walnut_N.uasset" to "A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Textures/T_Wood_Walnut_N.uasset"
-[2018.11.13-11.08.53:373][  0]LogRenderer: Reallocating scene render targets to support 256x256 Format 10 NumSamples 1 (Frame:1).
-[2018.11.13-11.08.53:429][  0]LogSavePackage: Moving 'A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Saved/Floor_400x400644CCF9D4A1DE58E72B1A1B44FC51F41.tmp' to 'A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Architecture/Floor_400x400.uasset'
-[2018.11.13-11.08.53:432][  0]LogFeaturePack: Warning: Inserted 1 feature packs
-[2018.11.13-11.08.53:434][  0]Cmd: MAP LOAD FILE="A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Maps/Minimal_Default.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
-[2018.11.13-11.08.53:434][  0]LightingResults: New page: Lighting Build
-[2018.11.13-11.08.53:437][  0]MapCheck: New page: Map Check
-[2018.11.13-11.08.53:437][  0]LightingResults: New page: Lighting Build
-[2018.11.13-11.08.53:730][  0]LogAIModule: Creating AISystem for world Minimal_Default
-[2018.11.13-11.08.53:737][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
-[2018.11.13-11.08.53:760][  0]Cmd: MAP CHECKDEP NOCLEARLOG
-[2018.11.13-11.08.53:825][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 64.7ms to complete.
-[2018.11.13-11.08.53:825][  0]LogFileHelpers: Loading map 'Minimal_Default' took 0.391
-[2018.11.13-11.08.53:954][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2018.11.13-11.08.53:960][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2018.11.13-11.08.53:967][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2018.11.13-11.08.53:973][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2018.11.13-11.08.53:978][  0]LogCollectionManager: Loaded 0 collections in 0.001366 seconds
-[2018.11.13-11.08.54:030][  0]LogFileCache: Scanning file cache for directory 'A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Saved/Collections/' took 0.01s
-[2018.11.13-11.08.54:030][  0]LogFileCache: Scanning file cache for directory 'A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/Developers/ThomasSimon/Collections/' took 0.01s
-[2018.11.13-11.08.54:030][  0]LogFileCache: Scanning file cache for directory 'A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/Collections/' took 0.01s
-[2018.11.13-11.08.54:030][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000000 seconds
-[2018.11.13-11.08.54:039][  0]LogContentBrowser: Native class hierarchy populated in 0.0091 seconds. Added 2574 classes and 607 folders.
-[2018.11.13-11.08.54:045][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0003 seconds. Added 0 classes and 0 folders.
-[2018.11.13-11.08.54:083][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0003 seconds. Added 0 classes and 0 folders.
-[2018.11.13-11.08.54:095][  0]LogSlate: Took 0.000203 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
-[2018.11.13-11.08.54:098][  0]LogSlate: Took 0.000229 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
-[2018.11.13-11.08.54:101][  0]LogSlate: Took 0.000195 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
-[2018.11.13-11.08.54:140][  0]LogRenderer: Reallocating scene render targets to support 1152x600 Format 10 NumSamples 1 (Frame:1).
-[2018.11.13-11.08.54:182][  0]LogSlate: Took 0.000233 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2018.11.13-11.08.54:255][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0003 seconds. Added 0 classes and 0 folders.
-[2018.11.13-11.08.54:255][  0]LogLoad: (Engine Initialization) Total time: 8.58 seconds
-[2018.11.13-11.08.54:255][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
-[2018.11.13-11.08.54:265][  0]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
-[2018.11.13-11.08.54:287][  0]LogAssetRegistry: Asset discovery search completed in 4.9168 seconds
-[2018.11.13-11.08.54:288][  0]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000000 seconds (found 0 objects)
-[2018.11.13-11.08.54:288][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000043 seconds (updated 0 objects)
-[2018.11.13-11.08.56:734][  0]LogContentStreaming: Texture pool size now 1000 MB
-[2018.11.13-11.09.25:734][ 18]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2018.11.13-11.09.25:891][ 32]LogSlate: Window 'GravityShift - Unreal Editor' being destroyed
-[2018.11.13-11.09.25:891][ 32]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
-[2018.11.13-11.09.26:040][ 33]Cmd: QUIT_EDITOR
-[2018.11.13-11.09.26:066][ 33]LogExit: Preparing to exit.
-[2018.11.13-11.09.26:369][ 33]LogExit: Editor shut down
-[2018.11.13-11.09.26:370][ 33]LogExit: Transaction tracking system shut down
-[2018.11.13-11.09.26:717][ 33]LogExit: Object subsystem successfully closed.
-[2018.11.13-11.09.26:830][ 33]LogShaderCompilers: Display: Shaders left to compile 0
-[2018.11.13-11.09.26:834][ 33]LogD3D11RHI: Shutdown
-[2018.11.13-11.09.26:834][ 33]LogD3D11RHI: CleanupD3DDevice
-[2018.11.13-11.09.26:844][ 33]LogD3D11RHI: ~FD3D11DynamicRHI
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (612)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module AddContentDialog (610)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module WidgetCarousel (609)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module EditorWidgets (606)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module CollectionManager (604)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module SceneOutliner (602)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module StatsViewer (600)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module FoliageEdit (598)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module LandscapeEditor (596)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module MeshPaintMode (594)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (592)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module ActorPickerMode (590)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module GeometryMode (588)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module TextureAlignMode (586)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module BspMode (584)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module PIEPreviewDeviceProfileSelector (582)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (580)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module AutomationWorker (578)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module AudioCaptureEditor (576)
-[2018.11.13-11.09.26:870][ 33]LogModuleManager: Shutting down and abandoning module SequenceRecorder (575)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (572)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (570)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module PlacementMode (569)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module MaterialEditor (568)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (564)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (562)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (560)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module OpenExrWrapper (558)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (556)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module ImgMediaEditor (554)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (552)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (550)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (548)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (546)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module MagicLeapCameraPreviewFactory (544)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module MagicLeapMediaFactory (542)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module MagicLeapMediaEditor (540)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module CharacterAI (538)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module SmartSnapping (536)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module SessionServices (534)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module ViewportSnapping (532)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module ViewportInteraction (530)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module ClothPainter (528)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module SkeletalMeshEditor (527)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module LogVisualizer (524)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module IntroTutorials (522)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (521)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module LuminPlatformEditor (518)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (516)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (514)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (512)
-[2018.11.13-11.09.26:871][ 33]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (511)
-[2018.11.13-11.09.27:221][ 33]LogModuleManager: Shutting down and abandoning module WindowsPlatformEditor (508)
-[2018.11.13-11.09.27:221][ 33]LogModuleManager: Shutting down and abandoning module LuminRuntimeSettings (506)
-[2018.11.13-11.09.27:221][ 33]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (504)
-[2018.11.13-11.09.27:221][ 33]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (502)
-[2018.11.13-11.09.27:221][ 33]LogModuleManager: Shutting down and abandoning module InputBindingEditor (500)
-[2018.11.13-11.09.27:221][ 33]LogModuleManager: Shutting down and abandoning module MergeActors (498)
-[2018.11.13-11.09.27:221][ 33]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (496)
-[2018.11.13-11.09.27:221][ 33]LogModuleManager: Shutting down and abandoning module LocalizationService (495)
-[2018.11.13-11.09.27:221][ 33]LogModuleManager: Shutting down and abandoning module HardwareTargeting (492)
-[2018.11.13-11.09.27:221][ 33]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (490)
-[2018.11.13-11.09.27:221][ 33]LogModuleManager: Shutting down and abandoning module UndoHistory (488)
-[2018.11.13-11.09.27:222][ 33]LogModuleManager: Shutting down and abandoning module XmlParser (486)
-[2018.11.13-11.09.27:222][ 33]LogModuleManager: Shutting down and abandoning module Blutility (484)
-[2018.11.13-11.09.27:222][ 33]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (482)
-[2018.11.13-11.09.27:222][ 33]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (481)
-[2018.11.13-11.09.27:222][ 33]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (478)
-[2018.11.13-11.09.27:222][ 33]LogModuleManager: Shutting down and abandoning module SettingsEditor (476)
-[2018.11.13-11.09.27:222][ 33]LogModuleManager: Shutting down and abandoning module ProjectLauncher (474)
-[2018.11.13-11.09.27:222][ 33]LogModuleManager: Shutting down and abandoning module SessionFrontend (472)
-[2018.11.13-11.09.27:222][ 33]LogModuleManager: Shutting down and abandoning module ProfilerClient (470)
-[2018.11.13-11.09.27:222][ 33]LogModuleManager: Shutting down and abandoning module DeviceManager (468)
-[2018.11.13-11.09.27:222][ 33]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (467)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module AutomationController (464)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module AutomationWindow (462)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module Layers (460)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (458)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module DetailCustomizations (456)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module PackagesDialog (454)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module Persona (452)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module AdvancedPreviewScene (451)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module AnimGraph (449)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module Kismet (446)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module GraphEditor (444)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module ClassViewer (442)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module Toolbox (440)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module DesktopPlatform (439)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module ModuleUI (436)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module MovieSceneTools (434)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module OutputLog (432)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module GammaUI (430)
-[2018.11.13-11.09.27:277][ 33]LogModuleManager: Shutting down and abandoning module Documentation (428)
-[2018.11.13-11.09.27:278][ 33]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (426)
-[2018.11.13-11.09.27:278][ 33]LogModuleManager: Shutting down and abandoning module MovieScene (424)
-[2018.11.13-11.09.27:278][ 33]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (422)
-[2018.11.13-11.09.27:278][ 33]LogModuleManager: Shutting down and abandoning module LauncherPlatform (420)
-[2018.11.13-11.09.27:278][ 33]LogModuleManager: Shutting down and abandoning module AnalyticsET (418)
-[2018.11.13-11.09.27:278][ 33]LogModuleManager: Shutting down and abandoning module PortalServices (416)
-[2018.11.13-11.09.27:278][ 33]LogModuleManager: Shutting down and abandoning module PortalRpc (414)
-[2018.11.13-11.09.27:278][ 33]LogModuleManager: Shutting down and abandoning module MessagingRpc (412)
-[2018.11.13-11.09.27:278][ 33]LogModuleManager: Shutting down and abandoning module AIModule (410)
-[2018.11.13-11.09.27:278][ 33]LogModuleManager: Shutting down and abandoning module GameplayDebugger (409)
-[2018.11.13-11.09.27:278][ 33]LogModuleManager: Shutting down and abandoning module AITestSuite (407)
-[2018.11.13-11.09.27:278][ 33]LogModuleManager: Shutting down and abandoning module NavigationSystem (405)
-[2018.11.13-11.09.27:278][ 33]LogModuleManager: Shutting down and abandoning module ProfilerService (402)
-[2018.11.13-11.09.27:429][ 33]LogModuleManager: Shutting down and abandoning module TaskGraph (400)
-[2018.11.13-11.09.27:429][ 33]LogModuleManager: Shutting down and abandoning module SteamVRController (398)
-[2018.11.13-11.09.27:429][ 33]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (396)
-[2018.11.13-11.09.27:429][ 33]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (394)
-[2018.11.13-11.09.27:429][ 33]LogModuleManager: Shutting down and abandoning module OculusInput (392)
-[2018.11.13-11.09.27:429][ 33]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (390)
-[2018.11.13-11.09.27:429][ 33]LogModuleManager: Shutting down and abandoning module EditableMesh (388)
-[2018.11.13-11.09.27:430][ 33]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (386)
-[2018.11.13-11.09.27:430][ 33]LogModuleManager: Shutting down and abandoning module CableComponent (384)
-[2018.11.13-11.09.27:430][ 33]LogModuleManager: Shutting down and abandoning module AudioCapture (382)
-[2018.11.13-11.09.27:430][ 33]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (380)
-[2018.11.13-11.09.27:430][ 33]LogModuleManager: Shutting down and abandoning module AndroidPermission (378)
-[2018.11.13-11.09.27:430][ 33]LogModuleManager: Shutting down and abandoning module NUTUnrealEngine4 (376)
-[2018.11.13-11.09.27:430][ 33]LogModuleManager: Shutting down and abandoning module NetcodeUnitTest (374)
-[2018.11.13-11.09.27:430][ 33]LogModuleManager: Shutting down and abandoning module MediaCompositingEditor (372)
-[2018.11.13-11.09.27:430][ 33]LogModuleManager: Shutting down and abandoning module MediaCompositing (370)
-[2018.11.13-11.09.27:430][ 33]LogModuleManager: Shutting down and abandoning module LinearTimecode (368)
-[2018.11.13-11.09.27:430][ 33]LogModuleManager: Shutting down and abandoning module ImgMedia (366)
-[2018.11.13-11.09.27:433][ 33]LogModuleManager: Shutting down and abandoning module HTML5Networking (364)
-[2018.11.13-11.09.27:433][ 33]LogModuleManager: Shutting down and abandoning module GeometryCacheTracks (362)
-[2018.11.13-11.09.27:433][ 33]LogModuleManager: Shutting down and abandoning module GeometryCacheSequencer (360)
-[2018.11.13-11.09.27:433][ 33]LogModuleManager: Shutting down and abandoning module BackChannel (358)
-[2018.11.13-11.09.27:433][ 33]LogModuleManager: Shutting down and abandoning module AppleVision (356)
-[2018.11.13-11.09.27:433][ 33]LogModuleManager: Shutting down and abandoning module AppleImageUtils (354)
-[2018.11.13-11.09.27:433][ 33]LogModuleManager: Shutting down and abandoning module AlembicImporter (352)
-[2018.11.13-11.09.27:434][ 33]LogModuleManager: Shutting down and abandoning module AlembicLibrary (351)
-[2018.11.13-11.09.27:434][ 33]LogModuleManager: Shutting down and abandoning module GeometryCache (350)
-[2018.11.13-11.09.27:434][ 33]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (349)
-[2018.11.13-11.09.27:434][ 33]LogModuleManager: Shutting down and abandoning module DatasmithContentEditor (344)
-[2018.11.13-11.09.27:434][ 33]LogModuleManager: Shutting down and abandoning module DatasmithContent (342)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (340)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module PluginBrowser (338)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (336)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module PolygonModeling (334)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module MeshEditor (332)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module CryptoKeysOpenSSL (330)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module CryptoKeys (328)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (326)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module VisualStudioCodeSourceCodeAccess (324)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module UObjectPlugin (322)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (320)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (318)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module GitSourceControl (316)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module SourceControl (315)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module CLionSourceCodeAccess (312)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (310)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (308)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (306)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module Paper2DEditor (304)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module MeshPaint (303)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module GravityShift (300)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module RuntimePhysXCooking (298)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module PhysXVehiclesEditor (296)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module PhysXVehicles (294)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module OculusEditor (292)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module LocationServicesBPLibrary (290)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module ImmediatePhysicsEditor (288)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module ImmediatePhysics (286)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module ActorSequence (284)
-[2018.11.13-11.09.27:435][ 33]LogModuleManager: Shutting down and abandoning module UdpMessaging (282)
-[2018.11.13-11.09.27:537][ 33]LogModuleManager: Shutting down and abandoning module TcpMessaging (280)
-[2018.11.13-11.09.27:637][ 33]LogModuleManager: Shutting down and abandoning module MagicLeapAudio (278)
-[2018.11.13-11.09.27:637][ 33]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (276)
-[2018.11.13-11.09.27:637][ 33]LogModuleManager: Shutting down and abandoning module FacialAnimationEditor (274)
-[2018.11.13-11.09.27:637][ 33]LogModuleManager: Shutting down and abandoning module FacialAnimation (272)
-[2018.11.13-11.09.27:637][ 33]LogModuleManager: Shutting down and abandoning module DataValidation (270)
-[2018.11.13-11.09.27:637][ 33]LogModuleManager: Shutting down and abandoning module AssetManagerEditor (268)
-[2018.11.13-11.09.27:637][ 33]LogModuleManager: Shutting down and abandoning module LevelEditor (267)
-[2018.11.13-11.09.27:637][ 33]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (266)
-[2018.11.13-11.09.27:637][ 33]LogModuleManager: Shutting down and abandoning module CommonMenuExtensions (264)
-[2018.11.13-11.09.27:637][ 33]LogModuleManager: Shutting down and abandoning module MainFrame (262)
-[2018.11.13-11.09.27:637][ 33]LogModuleManager: Shutting down and abandoning module HotReload (261)
-[2018.11.13-11.09.27:638][ 33]LogModuleManager: Shutting down and abandoning module ContentBrowser (257)
-[2018.11.13-11.09.27:639][ 33]LogModuleManager: Shutting down and abandoning module TreeMap (255)
-[2018.11.13-11.09.27:639][ 33]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (252)
-[2018.11.13-11.09.27:639][ 33]LogModuleManager: Shutting down and abandoning module AISupportModule (250)
-[2018.11.13-11.09.27:639][ 33]LogModuleManager: Shutting down and abandoning module Paper2D (248)
-[2018.11.13-11.09.27:639][ 33]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (246)
-[2018.11.13-11.09.27:639][ 33]LogModuleManager: Shutting down and abandoning module WmfMedia (244)
-[2018.11.13-11.09.27:640][ 33]LogModuleManager: Shutting down and abandoning module Media (243)
-[2018.11.13-11.09.27:647][ 33]LogModuleManager: Shutting down and abandoning module PacketHandler (240)
-[2018.11.13-11.09.27:647][ 33]LogModuleManager: Shutting down and abandoning module ClothingSystemEditor (238)
-[2018.11.13-11.09.27:647][ 33]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntime (236)
-[2018.11.13-11.09.27:648][ 33]LogModuleManager: Shutting down and abandoning module MediaAssets (234)
-[2018.11.13-11.09.27:648][ 33]LogModuleManager: Shutting down and abandoning module Overlay (232)
-[2018.11.13-11.09.27:648][ 33]LogModuleManager: Shutting down and abandoning module OverlayEditor (231)
-[2018.11.13-11.09.27:648][ 33]LogModuleManager: Shutting down and abandoning module VREditor (228)
-[2018.11.13-11.09.27:648][ 33]LogModuleManager: Shutting down and abandoning module StringTableEditor (226)
-[2018.11.13-11.09.27:648][ 33]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (224)
-[2018.11.13-11.09.27:648][ 33]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (222)
-[2018.11.13-11.09.27:648][ 33]LogModuleManager: Shutting down and abandoning module FunctionalTesting (220)
-[2018.11.13-11.09.27:648][ 33]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (218)
-[2018.11.13-11.09.27:649][ 33]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (217)
-[2018.11.13-11.09.27:649][ 33]LogModuleManager: Shutting down and abandoning module UMG (214)
-[2018.11.13-11.09.27:649][ 33]LogModuleManager: Shutting down and abandoning module UMGEditor (213)
-[2018.11.13-11.09.27:649][ 33]LogModuleManager: Shutting down and abandoning module Sequencer (212)
-[2018.11.13-11.09.27:649][ 33]LogModuleManager: Shutting down and abandoning module MessageLog (209)
-[2018.11.13-11.09.27:649][ 33]LogModuleManager: Shutting down and abandoning module SlateReflector (204)
-[2018.11.13-11.09.27:649][ 33]LogModuleManager: Shutting down and abandoning module Slate (202)
-[2018.11.13-11.09.27:649][ 33]LogModuleManager: Shutting down and abandoning module EditorStyle (200)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module MRMesh (198)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (196)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (194)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module XAudio2 (192)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module Networking (190)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module Core (188)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module LevelSequence (186)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module KismetCompiler (184)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module MeshUtilities (182)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module MeshMergeUtilities (181)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module MeshReductionInterface (180)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module SimplygonSwarm (179)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module ProxyLODMeshReduction (177)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module SimplygonMeshReduction (175)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (173)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module MaterialBaking (169)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (165)
-[2018.11.13-11.09.27:650][ 33]LogModuleManager: Shutting down and abandoning module DerivedDataCache (162)
-[2018.11.13-11.09.27:671][ 33]LogDerivedDataCache: Shutdown
-[2018.11.13-11.09.27:671][ 33]LogModuleManager: Shutting down and abandoning module XGEController (160)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module TargetPlatform (158)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (157)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module ShaderFormatVectorVM (155)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (153)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (151)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (149)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (147)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (145)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (143)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (141)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (139)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module ImageWrapper (138)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (135)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (133)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (131)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (129)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module LuminTargetPlatform (127)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (125)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (123)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (121)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module LinuxClientTargetPlatform (119)
-[2018.11.13-11.09.27:672][ 33]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (117)
-[2018.11.13-11.09.27:673][ 33]LogModuleManager: Shutting down and abandoning module Messaging (115)
-[2018.11.13-11.09.27:673][ 33]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (113)
-[2018.11.13-11.09.27:673][ 33]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (111)
-[2018.11.13-11.09.27:673][ 33]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (109)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (107)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (105)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (103)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (101)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module MacTargetPlatform (99)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module MacServerTargetPlatform (97)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module MacNoEditorTargetPlatform (95)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module MacClientTargetPlatform (93)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (91)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module InputCore (88)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module Settings (86)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module PhysXCooking (84)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module SteamVR (82)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module OculusHMD (80)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (78)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module LauncherChunkInstaller (76)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (74)
-[2018.11.13-11.09.27:679][ 33]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (70)
-[2018.11.13-11.09.27:680][ 33]LogModuleManager: Shutting down and abandoning module XMPP (65)
-[2018.11.13-11.09.27:680][ 33]LogModuleManager: Shutting down and abandoning module WebSockets (64)
-[2018.11.13-11.09.27:699][ 33]LogModuleManager: Shutting down and abandoning module HTTP (61)
-[2018.11.13-11.09.27:699][ 33]LogHttp: Display: Http module shutting down, but needs to wait on 1 outstanding Http requests:
-[2018.11.13-11.09.27:699][ 33]LogHttp: Display: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BD91D4025-48E0-FFD7-9B4E-B3B7671FAB7F%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.20.3-4369336%2B%2B%2BUE4%2BRelease-4.20&UserID=5fdfb9eb4a3af766a039a8b9b40f75dc%7C75455451a11a4e86936f96d58b7d0fbf%7C0157599c-15ed-48c0-9aab-018aec8adfe9&AppEnvironment=datacollector-binary&UploadType=eteventstream] status=Processing
-[2018.11.13-11.09.27:715][ 33]LogModuleManager: Shutting down and abandoning module SSL (60)
-[2018.11.13-11.09.27:716][ 33]LogModuleManager: Shutting down and abandoning module MagicLeapEmulator (56)
-[2018.11.13-11.09.27:716][ 33]LogModuleManager: Shutting down and abandoning module MagicLeapPrivileges (54)
-[2018.11.13-11.09.27:716][ 33]LogModuleManager: Shutting down and abandoning module MagicLeapIdentity (52)
-[2018.11.13-11.09.27:716][ 33]LogModuleManager: Shutting down and abandoning module MagicLeapHelperVulkan (50)
-[2018.11.13-11.09.27:716][ 33]LogModuleManager: Shutting down and abandoning module MagicLeapHelperOpenGL (48)
-[2018.11.13-11.09.27:716][ 33]LogModuleManager: Shutting down and abandoning module MagicLeapSecureStorage (46)
-[2018.11.13-11.09.27:716][ 33]LogModuleManager: Shutting down and abandoning module MagicLeapGestures (44)
-[2018.11.13-11.09.27:716][ 33]LogModuleManager: Shutting down and abandoning module MagicLeapEyeTracker (42)
-[2018.11.13-11.09.27:716][ 33]LogModuleManager: Shutting down and abandoning module MagicLeapController (40)
-[2018.11.13-11.09.27:716][ 33]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
-[2018.11.13-11.09.27:716][ 33]LogModuleManager: Shutting down and abandoning module MagicLeap (38)
-[2018.11.13-11.09.27:716][ 33]LogModuleManager: Shutting down and abandoning module AnimationModifiers (36)
-[2018.11.13-11.09.27:716][ 33]LogModuleManager: Shutting down and abandoning module PropertyEditor (35)
-[2018.11.13-11.09.27:716][ 33]LogModuleManager: Shutting down and abandoning module AudioEditor (32)
-[2018.11.13-11.09.27:716][ 33]LogModuleManager: Shutting down and abandoning module TextureCompressor (30)
-[2018.11.13-11.09.27:717][ 33]LogModuleManager: Shutting down and abandoning module ShaderCore (28)
-[2018.11.13-11.09.27:717][ 33]LogModuleManager: Shutting down and abandoning module Landscape (26)
-[2018.11.13-11.09.27:717][ 33]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (24)
-[2018.11.13-11.09.27:717][ 33]LogModuleManager: Shutting down and abandoning module OpenGLDrv (22)
-[2018.11.13-11.09.27:717][ 33]LogModuleManager: Shutting down and abandoning module D3D11RHI (20)
-[2018.11.13-11.09.27:717][ 33]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (18)
-[2018.11.13-11.09.27:717][ 33]LogModuleManager: Shutting down and abandoning module Renderer (16)
-[2018.11.13-11.09.27:717][ 33]LogModuleManager: Shutting down and abandoning module Engine (14)
-[2018.11.13-11.09.27:717][ 33]LogModuleManager: Shutting down and abandoning module CoreUObject (12)
-[2018.11.13-11.09.27:717][ 33]LogModuleManager: Shutting down and abandoning module NetworkFile (10)
-[2018.11.13-11.09.27:717][ 33]LogModuleManager: Shutting down and abandoning module CookedIterativeFile (8)
-[2018.11.13-11.09.27:717][ 33]LogModuleManager: Shutting down and abandoning module StreamingFile (6)
-[2018.11.13-11.09.27:717][ 33]LogModuleManager: Shutting down and abandoning module SandboxFile (4)
-[2018.11.13-11.09.27:717][ 33]LogModuleManager: Shutting down and abandoning module PakFile (2)
-[2018.11.13-11.09.27:720][ 33]LogExit: Exiting.
-[2018.11.13-11.09.27:737][ 33]Log file closed, 11/13/18 11:09:27
+[2018.11.13-11.12.29:551][  0]LogInit: Selected Device Profile: [Windows]
+[2018.11.13-11.12.29:551][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2018.11.13-11.12.29:567][  0]LogHAL: Display: Platform has ~ 16 GB [17116667904 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2018.11.13-11.12.29:567][  0]LogInit: Setting Device Profile CVar: [[r.Vulkan.UseRealUBs:1]]
+[2018.11.13-11.12.29:567][  0]LogInit: Going up to parent DeviceProfile []
+[2018.11.13-11.12.29:568][  0]LogInit: Computer: DESKTOP-C6U4EA4
+[2018.11.13-11.12.29:568][  0]LogInit: User: ThomasSimon
+[2018.11.13-11.12.29:568][  0]LogInit: CPU Page size=4096, Cores=4
+[2018.11.13-11.12.29:568][  0]LogInit: High frequency timer resolution =3.234371 MHz
+[2018.11.13-11.12.29:568][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2018.11.13-11.12.29:568][  0]LogMemory: Platform Memory Stats for Windows
+[2018.11.13-11.12.29:568][  0]LogMemory: Process Physical Memory: 99.65 MB used, 99.65 MB peak
+[2018.11.13-11.12.29:568][  0]LogMemory: Process Virtual Memory: 82.92 MB used, 82.92 MB peak
+[2018.11.13-11.12.29:568][  0]LogMemory: Physical Memory: 6006.21 MB used,  10317.51 MB free, 16323.73 MB total
+[2018.11.13-11.12.29:568][  0]LogMemory: Virtual Memory: 4623.84 MB used,  10317.51 MB free, 134217728.00 MB total
+[2018.11.13-11.12.29:585][  0]LogInit: Using OS detected language (en-GB).
+[2018.11.13-11.12.29:585][  0]LogInit: Using OS detected locale (en-GB).
+[2018.11.13-11.12.29:586][  0]LogTextLocalizationManager: No specific localization for 'en-GB' exists, so the 'en' localization will be used.
+[2018.11.13-11.12.29:944][  0]LogStreaming: Display: Took  0.358s to InitEngineTextLocalization.
+[2018.11.13-11.12.29:944][  0]LogInit: Setting process to per monitor DPI aware
+[2018.11.13-11.12.29:980][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2018.11.13-11.12.29:980][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2018.11.13-11.12.30:154][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2018.11.13-11.12.30:154][  0]LogD3D11RHI: D3D11 adapters:
+[2018.11.13-11.12.30:229][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 970' (Feature Level 11_0)
+[2018.11.13-11.12.30:229][  0]LogD3D11RHI:       4043/0/8161 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:3, VendorId:0x10de
+[2018.11.13-11.12.30:231][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2018.11.13-11.12.30:231][  0]LogD3D11RHI:       0/0/8161 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2018.11.13-11.12.30:231][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2018.11.13-11.12.30:238][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2018.11.13-11.12.30:238][  0]LogD3D11RHI:     GPU DeviceId: 0x13c2 (for the marketing name, search the web for "GPU Device Id")
+[2018.11.13-11.12.30:238][  0]LogWindows: EnumDisplayDevices:
+[2018.11.13-11.12.30:238][  0]LogWindows:    0. 'NVIDIA GeForce GTX 970' (P:0 D:1)
+[2018.11.13-11.12.30:238][  0]LogWindows:    1. 'NVIDIA GeForce GTX 970' (P:0 D:1)
+[2018.11.13-11.12.30:238][  0]LogWindows:    2. 'NVIDIA GeForce GTX 970' (P:1 D:1)
+[2018.11.13-11.12.30:239][  0]LogWindows:    3. 'NVIDIA GeForce GTX 970' (P:0 D:0)
+[2018.11.13-11.12.30:239][  0]LogWindows: DebugString: FoundDriverCount:4 
+[2018.11.13-11.12.30:239][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 970
+[2018.11.13-11.12.30:239][  0]LogD3D11RHI:   Driver Version: 398.11 (internal:24.21.13.9811, unified:398.11)
+[2018.11.13-11.12.30:239][  0]LogD3D11RHI:      Driver Date: 6-1-2018
+[2018.11.13-11.12.30:239][  0]LogRHI: Texture pool is 2830 MB (70% of 4043 MB)
+[2018.11.13-11.12.30:272][  0]LogD3D11RHI: Async texture creation enabled
+[2018.11.13-11.12.30:288][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 2)
+[2018.11.13-11.12.30:340][  0]LogShaderCompilers: Guid format shader working directory is -4 characters bigger than the processId version (A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Intermediate/Shaders/WorkingDirectory/8908/).
+[2018.11.13-11.12.30:340][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Thomas Simon/AppData/Local/Temp/UnrealShaderWorkingDir/012687584D457B905BD8B3819F28CF70/'.
+[2018.11.13-11.12.30:592][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
+[2018.11.13-11.12.30:604][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
+[2018.11.13-11.12.30:616][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
+[2018.11.13-11.12.30:628][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
+[2018.11.13-11.12.30:641][  0]LogTemp: Display: Loaded TP MacTargetPlatform
+[2018.11.13-11.12.30:653][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
+[2018.11.13-11.12.30:665][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
+[2018.11.13-11.12.30:678][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
+[2018.11.13-11.12.30:684][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:762][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.11.13-11.12.30:763][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
+[2018.11.13-11.12.30:820][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2018.11.13-11.12.30:820][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2018.11.13-11.12.30:841][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2018.11.13-11.12.30:841][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2018.11.13-11.12.30:853][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
+[2018.11.13-11.12.30:864][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
+[2018.11.13-11.12.30:875][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
+[2018.11.13-11.12.30:886][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
+[2018.11.13-11.12.30:894][  0]LogTemp: Display: Loaded TP LuminTargetPlatform
+[2018.11.13-11.12.30:894][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2018.11.13-11.12.30:950][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2018.11.13-11.12.30:950][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2018.11.13-11.12.30:950][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2018.11.13-11.12.31:642][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2018.11.13-11.12.31:701][  0]LogDerivedDataCache: Loaded boot cache 0.06s 71MB C:/Users/Thomas Simon/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc.
+[2018.11.13-11.12.31:701][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/Thomas Simon/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc
+[2018.11.13-11.12.31:701][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2018.11.13-11.12.31:701][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2018.11.13-11.12.31:701][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2018.11.13-11.12.31:701][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2018.11.13-11.12.31:713][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2018.11.13-11.12.31:727][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Thomas Simon/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2018.11.13-11.12.31:727][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2018.11.13-11.12.31:727][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2018.11.13-11.12.31:745][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2018.11.13-11.12.31:746][  0]LogSlate: Using FreeType 2.6.0
+[2018.11.13-11.12.31:747][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2018.11.13-11.12.31:819][  0]LogAssetRegistry: FAssetRegistry took 0.0254 seconds to start up
+[2018.11.13-11.12.32:103][  0]LogInit: Selected Device Profile: [Windows]
+[2018.11.13-11.12.32:228][  0]LogSimplygon: Simplygon DLL not present - disabling.
+[2018.11.13-11.12.32:232][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
+[2018.11.13-11.12.32:232][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2018.11.13-11.12.32:232][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2018.11.13-11.12.32:232][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
+[2018.11.13-11.12.32:256][  0]LogNetVersion: GravityShift 1.0.0, NetCL: 4212847, EngineNetVer: 5, GameNetVer: 0 (Checksum: 2627910602)
+[2018.11.13-11.12.32:787][  0]LogPackageLocalizationCache: Processed 11 localized package path(s) for 2 prioritized culture(s) in 0.135486 seconds
+[2018.11.13-11.12.32:793][  0]LogUObjectArray: 38425 objects as part of root set at end of initial load.
+[2018.11.13-11.12.32:793][  0]LogUObjectAllocator: 6690872 out of 0 bytes used by permanent object pool.
+[2018.11.13-11.12.32:793][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2018.11.13-11.12.33:599][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2018.11.13-11.12.33:612][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2018.11.13-11.12.33:732][  0]LogActorComponent: UnregisterComponent: (/Script/CustomGravityPlugin.Default__PlanetActor:SphereCollision0) Not registered. Aborting.
+[2018.11.13-11.12.33:767][  0]SourceControl: Source control is disabled
+[2018.11.13-11.12.33:767][  0]SourceControl: Source control is disabled
+[2018.11.13-11.12.33:768][  0]SourceControl: Source control is disabled
+[2018.11.13-11.12.33:769][  0]SourceControl: Source control is disabled
+[2018.11.13-11.12.33:928][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2018.11.13-11.12.33:973][  0]LogOcInput: OculusInput pre-init called
+[2018.11.13-11.12.34:028][  0]LogEngine: Initializing Engine...
+[2018.11.13-11.12.34:029][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2018.11.13-11.12.34:030][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
+[2018.11.13-11.12.34:030][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2018.11.13-11.12.34:030][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
+[2018.11.13-11.12.34:030][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2018.11.13-11.12.34:228][  0]LogInit: Initializing FReadOnlyCVARCache
+[2018.11.13-11.12.34:240][  0]LogAIModule: Creating AISystem for world Untitled
+[2018.11.13-11.12.34:257][  0]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 44.1 kHz using 16 bits per sample (channel mask 0x3)
+[2018.11.13-11.12.34:273][  0]LogInit: FAudioDevice initialized.
+[2018.11.13-11.12.34:273][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2018.11.13-11.12.34:352][  0]LogDerivedDataCache: Saved boot cache 0.08s 71MB C:/Users/Thomas Simon/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc.
+[2018.11.13-11.12.34:359][  0]LogInit: Texture streaming: Enabled
+[2018.11.13-11.12.34:376][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2018.11.13-11.12.34:391][  0]LogInit: Transaction tracking system initialized
+[2018.11.13-11.12.34:413][  0]BlueprintLog: New page: Editor Load
+[2018.11.13-11.12.34:492][  0]LocalizationService: Localization service is disabled
+[2018.11.13-11.12.34:726][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2018.11.13-11.12.34:726][  0]LogCook: Display: Mobile HDR setting 1
+[2018.11.13-11.12.34:726][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
+[2018.11.13-11.12.34:726][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
+[2018.11.13-11.12.34:726][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2018.11.13-11.12.34:726][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
+[2018.11.13-11.12.34:726][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2018.11.13-11.12.34:838][  0]LogFileCache: Scanning file cache for directory 'A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/' took 0.01s
+[2018.11.13-11.12.34:838][  0]SourceControl: Source control is disabled
+[2018.11.13-11.12.34:838][  0]Cmd: MAP LOAD FILE="A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/StarterContent/Maps/Minimal_Default.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2018.11.13-11.12.34:838][  0]LightingResults: New page: Lighting Build
+[2018.11.13-11.12.34:841][  0]MapCheck: New page: Map Check
+[2018.11.13-11.12.34:841][  0]LightingResults: New page: Lighting Build
+[2018.11.13-11.12.35:144][  0]LogAIModule: Creating AISystem for world Minimal_Default
+[2018.11.13-11.12.35:151][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2018.11.13-11.12.35:174][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2018.11.13-11.12.35:236][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 61.856ms to complete.
+[2018.11.13-11.12.35:236][  0]LogFileHelpers: Loading map 'Minimal_Default' took 0.398
+[2018.11.13-11.12.35:355][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2018.11.13-11.12.35:361][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2018.11.13-11.12.35:369][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2018.11.13-11.12.35:375][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2018.11.13-11.12.35:381][  0]LogCollectionManager: Loaded 0 collections in 0.001539 seconds
+[2018.11.13-11.12.35:431][  0]LogFileCache: Scanning file cache for directory 'A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Saved/Collections/' took 0.01s
+[2018.11.13-11.12.35:431][  0]LogFileCache: Scanning file cache for directory 'A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/Developers/ThomasSimon/Collections/' took 0.01s
+[2018.11.13-11.12.35:431][  0]LogFileCache: Scanning file cache for directory 'A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Content/Collections/' took 0.01s
+[2018.11.13-11.12.35:431][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000015 seconds
+[2018.11.13-11.12.35:440][  0]LogContentBrowser: Native class hierarchy populated in 0.0091 seconds. Added 2584 classes and 614 folders.
+[2018.11.13-11.12.35:446][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2018.11.13-11.12.35:485][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0004 seconds. Added 0 classes and 0 folders.
+[2018.11.13-11.12.35:497][  0]LogSlate: Took 0.000208 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2018.11.13-11.12.35:502][  0]LogSlate: Took 0.000452 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2018.11.13-11.12.35:505][  0]LogSlate: Took 0.000247 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2018.11.13-11.12.35:572][  0]LogRenderer: Reallocating scene render targets to support 1152x600 Format 10 NumSamples 1 (Frame:1).
+[2018.11.13-11.12.35:695][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2018.11.13-11.12.35:695][  0]LogLoad: (Engine Initialization) Total time: 7.48 seconds
+[2018.11.13-11.12.35:695][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2018.11.13-11.12.35:705][  0]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2018.11.13-11.12.35:723][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2018.11.13-11.12.35:733][  0]LogSlate: Took 0.000225 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2018.11.13-11.12.35:779][  1]LogAssetRegistry: Asset discovery search completed in 3.9824 seconds
+[2018.11.13-11.12.35:780][  1]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000000 seconds (found 0 objects)
+[2018.11.13-11.12.35:780][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000053 seconds (updated 0 objects)
+[2018.11.13-11.12.39:083][393]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2018.11.13-11.12.53:854][161]LogSlate: Window 'Plugins' being destroyed
+[2018.11.13-11.12.53:857][161]LogSlate: Window 'Plugins' being destroyed
+[2018.11.13-11.12.53:857][161]LogDirectoryWatcher: A directory notification for '../../../Engine/Plugins/' was aborted.
+[2018.11.13-11.12.53:857][161]LogDirectoryWatcher: A directory notification for 'A:/Projects/Unreal Engine Projects/TwoATOnce/GravityShift/Plugins/' was aborted.
