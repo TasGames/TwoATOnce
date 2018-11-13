@@ -1,3 +1,4 @@
 A:\Projects\Unreal Engine Projects\TwoATOnce\GravityShift\Source\GravityShift\GravityShift.Build.cs
+A:\Projects\Unreal Engine Projects\TwoATOnce\GravityShift\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\CustomGravityPlugin.Build.cs
 A:\Projects\Unreal Engine Projects\TwoATOnce\GravityShift\Source\GravityShift.Target.cs
 A:\Projects\Unreal Engine Projects\TwoATOnce\GravityShift\Source\GravityShiftEditor.Target.cs

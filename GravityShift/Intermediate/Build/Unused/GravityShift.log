@@ -1,0 +1,26 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build.
+  Creating makefile for GravityShiftEditor (game project files are newer)
+  Using Visual Studio 2017 14.15.26726 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726) and Windows 10.0.17134.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+A:\Projects\Unreal Engine Projects\TwoATOnce\GravityShift\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\CustomGravityPlugin.Build.cs : warning : Referenced directory 'C:\Program Files\Epic Games\UE_4.20\Engine\Source\CustomGravityPlugin\Public' does not exist.
+  Parsing headers for GravityShiftEditor
+    Running UnrealHeaderTool "A:\Projects\Unreal Engine Projects\TwoATOnce\GravityShift\GravityShift.uproject" "A:\Projects\Unreal Engine Projects\TwoATOnce\GravityShift\Intermediate\Build\Win64\GravityShiftEditor\Development\GravityShiftEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for GravityShiftEditor in 10.0411774 seconds
+  Building 12 actions with 4 processes...
+    [1/12] PCLaunch.rc
+    [2/12] SharedPCH.Engine.cpp
+    [3/12] GravityShift.cpp
+    [4/12] GravityShift.init.gen.cpp
+    [5/12] GravityShiftGameModeBase.cpp
+    [6/12] GravityShiftGameModeBase.gen.cpp
+    [7/12] UE4Editor-GravityShift.lib
+       Creating library A:\Projects\Unreal Engine Projects\TwoATOnce\GravityShift\Intermediate\Build\Win64\UE4Editor\Development\GravityShift\UE4Editor-GravityShift.lib and object A:\Projects\Unreal Engine Projects\TwoATOnce\GravityShift\Intermediate\Build\Win64\UE4Editor\Development\GravityShift\UE4Editor-GravityShift.exp
+    [8/12] UE4Editor-GravityShift.dll
+       Creating library A:\Projects\Unreal Engine Projects\TwoATOnce\GravityShift\Intermediate\Build\Win64\UE4Editor\Development\GravityShift\UE4Editor-GravityShift.suppressed.lib and object A:\Projects\Unreal Engine Projects\TwoATOnce\GravityShift\Intermediate\Build\Win64\UE4Editor\Development\GravityShift\UE4Editor-GravityShift.suppressed.exp
+    [9/12] Module.CustomGravityPlugin.gen.cpp
+    [10/12] Module.CustomGravityPlugin.cpp
+    [11/12] UE4Editor-CustomGravityPlugin.lib
+       Creating library A:\Projects\Unreal Engine Projects\TwoATOnce\GravityShift\Plugins\CustomGravityPlugin\Intermediate\Build\Win64\UE4Editor\Development\CustomGravityPlugin\UE4Editor-CustomGravityPlugin.lib and object A:\Projects\Unreal Engine Projects\TwoATOnce\GravityShift\Plugins\CustomGravityPlugin\Intermediate\Build\Win64\UE4Editor\Development\CustomGravityPlugin\UE4Editor-CustomGravityPlugin.exp
+    [12/12] UE4Editor-CustomGravityPlugin.dll
+       Creating library A:\Projects\Unreal Engine Projects\TwoATOnce\GravityShift\Plugins\CustomGravityPlugin\Intermediate\Build\Win64\UE4Editor\Development\CustomGravityPlugin\UE4Editor-CustomGravityPlugin.suppressed.lib and object A:\Projects\Unreal Engine Projects\TwoATOnce\GravityShift\Plugins\CustomGravityPlugin\Intermediate\Build\Win64\UE4Editor\Development\CustomGravityPlugin\UE4Editor-CustomGravityPlugin.suppressed.exp
+  Deploying GravityShiftEditor Win64 Development...
+  Total build time: 55.54 seconds (Parallel executor: 39.82 seconds)

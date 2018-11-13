@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\GravityShift.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{F2630184-58C0-447C-AE4B-578459379862}</UniqueIdentifier>
+			<UniqueIdentifier>{257D57B4-41A6-445F-B06B-21AC7E27309E}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\GravityShift.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{9EBAAC78-054F-4DFB-8181-AF190AAFF426}</UniqueIdentifier>
+			<UniqueIdentifier>{E9C00D02-0703-4F24-A951-13EA5E27CABA}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -24,8 +24,131 @@
 		<None Include="..\..\Config\DefaultGame.ini">
 			<Filter>Config</Filter>
 		</None >
+		<Filter Include="Plugins">
+			<UniqueIdentifier>{59F8CBCA-D50C-44BB-8C24-FA8BF021C908}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\CustomGravityPlugin">
+			<UniqueIdentifier>{8726C8D1-F074-4FEB-A715-1CA6E5F9BCC2}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\CustomGravityPlugin\Source">
+			<UniqueIdentifier>{5A099CCC-9B19-413F-A561-EE0EE9815FFC}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\CustomGravityPlugin\Source\CustomGravityPlugin">
+			<UniqueIdentifier>{F4F01472-061F-4F6D-A9D6-9CF3C8D1A4D3}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\CustomGravityPlugin.Build.cs">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin</Filter>
+		</None >
+		<Filter Include="Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private">
+			<UniqueIdentifier>{AED40A77-25CA-4089-B959-DB8607B1E23B}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\CustomGravityPlugin.cpp">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\CustomGravityPluginPrivatePCH.h">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private</Filter>
+		</ClInclude >
+		<Filter Include="Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Actors">
+			<UniqueIdentifier>{9C910DEA-A8D8-4F8A-8860-F26AE33E2457}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Actors\CustomPhysicsActor.cpp">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Actors</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Actors\PlanetActor.cpp">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Actors</Filter>
+		</ClCompile >
+		<Filter Include="Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Components">
+			<UniqueIdentifier>{DBA139B8-C688-4745-BEF7-3EB12F8DBA45}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Components\CustomGravityComponent.cpp">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Components</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Components\CustomMovementComponent.cpp">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Components</Filter>
+		</ClCompile >
+		<Filter Include="Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Objects">
+			<UniqueIdentifier>{502B7B6F-A64D-4E6B-B128-47450C3ED331}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Objects\CustomGravityManager.cpp">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Objects</Filter>
+		</ClCompile >
+		<Filter Include="Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Pawns">
+			<UniqueIdentifier>{01471607-C48C-4D04-9663-E14404A83D2C}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Pawns\CustomPawn.cpp">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Pawns</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Pawns\FirstPersonCharacter.cpp">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Pawns</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Pawns\PhysicsBallPawn.cpp">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Pawns</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Pawns\ThirdPersonBall.cpp">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Pawns</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Pawns\ThirdPersonCharacter.cpp">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Private\Pawns</Filter>
+		</ClCompile >
+		<Filter Include="Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public">
+			<UniqueIdentifier>{3338D695-2183-49CB-9295-A9E7DE90BA34}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\CustomGravityPlugin.h">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public</Filter>
+		</ClInclude >
+		<Filter Include="Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Actors">
+			<UniqueIdentifier>{E8A19155-2DA9-4D37-BE0B-F848D859F2E2}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Actors\CustomPhysicsActor.h">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Actors</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Actors\PlanetActor.h">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Actors</Filter>
+		</ClInclude >
+		<Filter Include="Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Components">
+			<UniqueIdentifier>{E6C10D04-85E6-43C3-A6EF-A6E862A3E67B}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Components\CustomGravityComponent.h">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Components</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Components\CustomMovementComponent.h">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Components</Filter>
+		</ClInclude >
+		<Filter Include="Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Objects">
+			<UniqueIdentifier>{A9D1612E-E651-4E00-B3EC-E6C1DA502F0E}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Objects\CustomGravityManager.h">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Objects</Filter>
+		</ClInclude >
+		<Filter Include="Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Pawns">
+			<UniqueIdentifier>{A26B7D55-E1A4-4947-A2A0-8C0763B83C07}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Pawns\CustomPawn.h">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Pawns</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Pawns\FirstPersonCharacter.h">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Pawns</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Pawns\PhysicsBallPawn.h">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Pawns</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Pawns\ThirdPersonBall.h">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Pawns</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Pawns\ThirdPersonCharacter.h">
+			<Filter>Plugins\CustomGravityPlugin\Source\CustomGravityPlugin\Public\Pawns</Filter>
+		</ClInclude >
+		<None Include="..\..\Plugins\CustomGravityPlugin\CustomGravityPlugin.uplugin">
+			<Filter>Plugins\CustomGravityPlugin</Filter>
+		</None >
+		<Filter Include="Plugins\CustomGravityPlugin\Resources">
+			<UniqueIdentifier>{85600802-4E87-4CE4-9A15-6EF33C6002F4}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Plugins\CustomGravityPlugin\Resources\Icon128.png">
+			<Filter>Plugins\CustomGravityPlugin\Resources</Filter>
+		</None >
 		<Filter Include="Source\GravityShift">
-			<UniqueIdentifier>{99C9C61F-C551-402E-A01A-977F93448F52}</UniqueIdentifier>
+			<UniqueIdentifier>{70F1374C-8561-43E8-9439-7549EFF9020B}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\GravityShift\GravityShift.Build.cs">
 			<Filter>Source\GravityShift</Filter>

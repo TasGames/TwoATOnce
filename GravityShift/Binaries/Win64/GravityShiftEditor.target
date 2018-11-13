@@ -24,6 +24,14 @@
 			"Type": "Executable"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/CustomGravityPlugin/Binaries/Win64/UE4Editor-CustomGravityPlugin.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/CustomGravityPlugin/Binaries/Win64/UE4Editor-CustomGravityPlugin.pdb",
+			"Type": "SymbolFile"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2D.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -1708,6 +1716,10 @@
 			"Type": "BuildResource"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/CustomGravityPlugin/Binaries/Win64/UE4Editor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor.modules",
 			"Type": "RequiredResource"
 		},
@@ -1999,6 +2011,10 @@
 	"RuntimeDependencies": [
 		{
 			"Path": "$(ProjectDir)/GravityShift.uproject",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/CustomGravityPlugin/CustomGravityPlugin.uplugin",
 			"Type": "UFS"
 		},
 		{
