@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\GravityShift.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{F2630184-58C0-447C-AE4B-578459379862}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\GravityShift.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\GravityShiftEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{9EBAAC78-054F-4DFB-8181-AF190AAFF426}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\GravityShift">
+			<UniqueIdentifier>{99C9C61F-C551-402E-A01A-977F93448F52}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\GravityShift\GravityShift.Build.cs">
+			<Filter>Source\GravityShift</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\GravityShift\GravityShift.cpp">
+			<Filter>Source\GravityShift</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\GravityShift\GravityShift.h">
+			<Filter>Source\GravityShift</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\GravityShift\GravityShiftGameModeBase.cpp">
+			<Filter>Source\GravityShift</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\GravityShift\GravityShiftGameModeBase.h">
+			<Filter>Source\GravityShift</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>
